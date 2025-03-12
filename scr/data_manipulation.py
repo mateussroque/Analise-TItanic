@@ -11,7 +11,7 @@ Original file is located at
 
 import pandas as pd
 import matplotlib.pyplot as plt
-df = pd.read_csv("titanic.csv")
+df = pd.read_csv("data/titanic.csv")
 df.head()
 df["Survived"].plot
 
@@ -35,7 +35,6 @@ plt.xlabel('Sexo')
 plt.ylabel('Quantidade')
 plt.title('Quantidade de Homens e Mulheres no Titanic')
 plt.show()
-
 
 
 

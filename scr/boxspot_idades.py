@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('../data/titanic.csv')
+df = pd.read_csv('data/titanic.csv')
 
 plt.figure(figsize=(8, 6))
 
