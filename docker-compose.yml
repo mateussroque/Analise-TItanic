@@ -1,0 +1,18 @@
+services:
+  db:
+    image: mysql/mysql-server:latest # imagem usada para o docker
+    container_name: mysql # nome do container
+    restart: always # reinicia o serviço após inicialização
+    environment:        # variaveis de ambiente
+      MYSQL_DATABASE: ${MYSQL_DATABASE} #nome do banco
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD} #senha do banco
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} #senha do root
+    networks:
+      - public_network
+    ports:
+      - 3306:3306 #porta mapeada para acesso ao MySQL
+    volumes:
+      - mysql-volume:/var/lib/mysql #nome e caminho do volume criado para persistência dos dados
+
+volumes:
+  mysql-volume: {}
