@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: streamlit_service
     ports:
-      - 8000:800
+      - 8501:8501
     volumes:
-      - app:/app #nome e caminho do volume criado para persistência dos dados
+      - ./workdir/app:/app #nome e caminho do volume criado para persistência dos dados
+      - ../data:/data

@@ -7,7 +7,7 @@ st.set_page_config(layout="wide")
 st.title("Análise Completa dos Dados do Titanic")  
 st.write("Aqui você encontrará uma análise detalhada sobre os passageiros do Titanic, incluindo gráficos e estatísticas.") 
 
-df = pd.read_csv('../data/titanic.csv')
+df = pd.read_csv('../../data/titanic.csv')
 
 resultado = df.groupby(['Sex', 'Survived']).size().unstack(fill_value=0)
 resultado.columns = ['Falecidos', 'Sobreviventes']
