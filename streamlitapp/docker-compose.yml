@@ -1,0 +1,10 @@
+services:
+  dashboard:
+    build:
+      context: ./workdir
+      dockerfile: Dockerfile
+    container_name: streamlit_service
+    ports:
+      - 8000:800
+    volumes:
+      - app:/app #nome e caminho do volume criado para persistência dos dados
